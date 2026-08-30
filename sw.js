@@ -1,5 +1,5 @@
-const CACHE_NAME='soccer-trainer-v1.0.1';
-const ASSETS=['./','./index.html','./styles.css','./app.js','./manifest.webmanifest','./icon-512.jpg'];
+const CACHE_NAME='soccer-trainer-v1.0.2';
+const ASSETS=['./','./index.html','./styles.css','./app.js','./manifest.webmanifest','./icon.svg','./apple-touch-icon.png'];
 
 self.addEventListener('install',event=>{
   event.waitUntil(caches.open(CACHE_NAME).then(cache=>cache.addAll(ASSETS)).then(()=>self.skipWaiting()));
