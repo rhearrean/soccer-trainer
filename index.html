@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0f172a">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Soccer Trainer">
+  <title>Soccer Trainer</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">SOCCER TRAINER</p>
+        <h1>Today’s Practice</h1>
+      </div>
+      <span id="version" class="version">v1.0.0</span>
+    </header>
+
+    <section id="homeView" class="view active" aria-labelledby="homeTitle">
+      <div class="level-card">
+        <div class="level-row">
+          <div>
+            <p class="label">Current level</p>
+            <h2 id="homeTitle">Beginner 1 · Ball Comfort</h2>
+            <p id="levelDescription" class="muted">Build confidence touching and moving the ball.</p>
+          </div>
+          <div class="progress-badge"><span id="sessionProgress">0 / 3</span><small>sessions</small></div>
+        </div>
+        <div class="progress-track" aria-hidden="true"><span id="progressFill"></span></div>
+      </div>
+
+      <section class="practice-card">
+        <p class="label">Next practice</p>
+        <h2 id="nextSessionTitle">Session 1 · Ball Confidence</h2>
+        <p class="muted">About 10 minutes · simple guided drills</p>
+        <button id="startPractice" class="primary" type="button">Start Practice</button>
+      </section>
+
+      <section>
+        <div class="section-heading"><h2>This level</h2><span id="levelNumber" class="muted">Level 1</span></div>
+        <div id="sessionList" class="session-list"></div>
+      </section>
+
+      <details class="details-card">
+        <summary>Progress & settings</summary>
+        <div class="details-body">
+          <p id="totalPracticeText" class="muted">0 practices completed</p>
+          <button id="resetProgress" class="secondary danger" type="button">Reset all progress</button>
+        </div>
+      </details>
+    </section>
+
+    <section id="practiceView" class="view" aria-live="polite">
+      <div class="practice-topline">
+        <button id="exitPractice" class="text-button" type="button">← Exit</button>
+        <span id="drillCounter" class="muted">Drill 1 of 4</span>
+      </div>
+      <div class="drill-card">
+        <p id="practiceSessionName" class="label">Session 1</p>
+        <h2 id="drillTitle">Free Dribble</h2>
+        <p id="drillInstruction" class="instruction"></p>
+        <div id="timerDisplay" class="timer">02:00</div>
+        <div class="timer-actions">
+          <button id="timerToggle" class="secondary" type="button">Start Timer</button>
+          <button id="nextDrill" class="primary" type="button">Next Drill</button>
+        </div>
+      </div>
+      <div class="coach-card">
+        <p class="label">Coach cue</p>
+        <p id="coachCue"></p>
+      </div>
+    </section>
+
+    <section id="completeView" class="view">
+      <div class="complete-card">
+        <div class="ball" aria-hidden="true">⚽</div>
+        <h2>Practice Complete!</h2>
+        <p id="completeText" class="muted"></p>
+        <button id="savePractice" class="primary" type="button">Save & Finish</button>
+        <button id="repeatPractice" class="secondary" type="button">Repeat This Practice</button>
+      </div>
+    </section>
+  </main>
+  <script src="app.js" defer></script>
+</body>
+</html>
