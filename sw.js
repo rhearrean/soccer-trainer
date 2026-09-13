@@ -1,4 +1,4 @@
-const CACHE_NAME='soccer-trainer-v1.0.2';
+const CACHE_NAME='soccer-trainer-v1.1.0';
 const ASSETS=['./','./index.html','./styles.css','./app.js','./manifest.webmanifest','./icon.svg','./apple-touch-icon.png'];
 
 self.addEventListener('install',event=>{
