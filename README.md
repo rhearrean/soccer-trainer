@@ -2,7 +2,7 @@
 
 A simple progressive soccer-training PWA for short at-home youth practices.
 
-## Version 1.0.0
+## Version 1.1.0
 
 - Three guided practices per level
 - Approximately 10 minutes per practice
@@ -13,6 +13,7 @@ A simple progressive soccer-training PWA for short at-home youth practices.
 - Offline support via service worker
 - Installable PWA manifest
 - GitHub Pages deployment workflow
+- Age-appropriate defending added without creating a separate defender-only plan
 
 ## Beginner progression
 
@@ -22,8 +23,10 @@ A simple progressive soccer-training PWA for short at-home youth practices.
 4. Passing
 5. First Touch
 6. Shooting
-7. Protect the Ball
+7. 1-on-1 Attacking & Defending
 8. Put It Together
+
+Defensive concepts are introduced gradually through 1-on-1 activities before the dedicated Level 7 work. The focus is on staying goal-side, slowing the attacker, recovering toward goal, choosing when to challenge, and keeping possession after winning the ball.
 
 Progress is intentionally skill-based rather than tied to calendar weeks. Completing three sessions advances to the next level.
 
