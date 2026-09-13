@@ -1,4 +1,4 @@
-const APP_VERSION='1.0.0';
+const APP_VERSION='1.1.0';
 const STORAGE_KEY='soccer-trainer-progress-v1';
 
 const levels=[
@@ -10,12 +10,12 @@ const levels=[
 {title:'Beginner 2 · Dribbling',description:'Move with the ball under control.',cue:'Encourage small touches and occasional looks up.',sessions:[
 {name:'Session 1 · Small Touches',drills:[['Warm-Up',120,'Free dribble with both feet.'],['Right Foot',120,'Dribble mostly with the right foot.'],['Left Foot',120,'Dribble mostly with the left foot.'],['Cone Race',240,'Dribble through cones and back. Control matters more than speed.']]},
 {name:'Session 2 · Change Direction',drills:[['Warm-Up',120,'Free dribble.'],['Stop & Go',180,'Dribble, stop the ball with the sole, then go again.'],['Turn Around',180,'Dribble to a cone, turn, and come back.'],['Red Light Game',120,'Play Red Light, Green Light while dribbling.']]},
-{name:'Session 3 · Dribble Game',drills:[['Warm-Up',120,'Easy dribbling.'],['Inside Touches',120,'Move the ball using the inside of each foot.'],['Obstacle Course',180,'Create a short course using shoes or cones.'],['1-on-1 Finish',180,'She tries to dribble around you and cross a finish line.']]}
+{name:'Session 3 · Dribble Game',drills:[['Warm-Up',120,'Easy dribbling.'],['Inside Touches',120,'Move the ball using the inside of each foot.'],['Obstacle Course',180,'Create a short course using shoes or cones.'],['Attack & Defend',180,'Take turns. She tries to dribble past you, then you dribble slowly while she tries to stay between you and the finish line.']]}
 ]},
 {title:'Beginner 3 · Turning & Stopping',description:'Stop, turn, and change direction with confidence.',cue:'Praise control more than speed.',sessions:[
 {name:'Session 1 · Stop the Ball',drills:[['Warm-Up',120,'Free dribble.'],['Sole Stops',180,'Stop the ball using the bottom of the foot.'],['Go & Stop',180,'Dribble five steps, stop, then go again.'],['Freeze Game',120,'Call freeze at random while she dribbles.']]},
 {name:'Session 2 · Turn Back',drills:[['Warm-Up',120,'Free dribble.'],['Pull Back',180,'Place a foot on top of the ball and pull it backward.'],['Cone Turn',180,'Dribble to a cone, pull the ball back, and return.'],['Escape',120,'Approach slowly and have her turn away with the ball.']]},
-{name:'Session 3 · Direction Challenge',drills:[['Warm-Up',120,'Free dribble.'],['Left & Right',180,'Call left or right and have her change direction.'],['Cone Course',180,'Combine stops and turns around cones.'],['Mini 1-on-1',120,'Try to cross a line while keeping the ball away from you.']]}
+{name:'Session 3 · Direction Challenge',drills:[['Warm-Up',120,'Free dribble.'],['Left & Right',180,'Call left or right and have her change direction.'],['Cone Course',180,'Combine stops and turns around cones.'],['Mini 1-on-1',120,'Take turns attacking. When she defends, remind her to stay goal-side and slow you down instead of diving in.']]}
 ]},
 {title:'Beginner 4 · Passing',description:'Learn a controlled inside-foot pass.',cue:'Plant foot beside the ball and pass with the inside of the foot.',sessions:[
 {name:'Session 1 · Pass to Dad',drills:[['Warm-Up',120,'Free dribble.'],['Inside Foot Pass',180,'Stand about six feet apart and pass back and forth.'],['Pass Through Gate',180,'Make a small gate with two cones and pass through it.'],['Score the Gate',120,'Earn one point for every pass through the target.']]},
@@ -32,15 +32,15 @@ const levels=[
 {name:'Session 2 · Dribble & Shoot',drills:[['Warm-Up',120,'Free dribble.'],['Dribble Then Stop',120,'Dribble toward goal and stop the ball.'],['Dribble & Shoot',240,'Take several controlled touches, then shoot.'],['Beat Your Score',120,'Try to improve the number of accurate shots.']]},
 {name:'Session 3 · Shooting Game',drills:[['Warm-Up',120,'Free dribble.'],['Left Side Shot',120,'Approach from the left and shoot.'],['Right Side Shot',120,'Approach from the right and shoot.'],['Score on Dad',240,'You play easy goalkeeper while she tries to score.']]}
 ]},
-{title:'Beginner 7 · Protect the Ball',description:'Introduce shielding and simple 1-on-1 play.',cue:'Keep her body between the defender and the ball.',sessions:[
-{name:'Session 1 · Shielding',drills:[['Warm-Up',120,'Free dribble.'],['Body Between',180,'She keeps her body between you and a stationary ball.'],['Move & Shield',180,'She dribbles slowly while you apply light pressure.'],['Protect for 10',120,'See if she can protect the ball for ten seconds.']]},
-{name:'Session 2 · Escape',drills:[['Warm-Up',120,'Free dribble.'],['Turn Away',180,'Approach slowly and have her turn away with the ball.'],['Find Space',180,'After turning, dribble toward open space.'],['Escape Game',120,'She scores by crossing a line without losing the ball.']]},
-{name:'Session 3 · 1-on-1',drills:[['Warm-Up',120,'Free dribble.'],['Attack the Cone',120,'Dribble toward a cone then change direction.'],['Beat Dad',240,'You defend lightly while she tries to dribble around you.'],['Finish on Goal',120,'After getting around you, she shoots.']]}
+{title:'Beginner 7 · 1-on-1 Attacking & Defending',description:'Learn to protect the ball, stay goal-side, slow an attacker, and win the ball under control.',cue:'When defending: stay between the attacker and goal, slow them down, and do not dive in.',sessions:[
+{name:'Session 1 · Protect & Stay Goal-Side',drills:[['Warm-Up',120,'Free dribble.'],['Body Between',180,'She keeps her body between you and a stationary ball.'],['Stay Goal-Side',180,'You dribble slowly toward a cone goal. She stays between you and the goal without trying to steal right away.'],['Protect for 10',120,'Switch roles. See if she can protect the ball for ten seconds, then defend you for ten seconds.']]},
+{name:'Session 2 · Slow the Attacker',drills:[['Warm-Up',120,'Free dribble.'],['Defending Stance',120,'Practice approaching under control with knees slightly bent and body turned a little sideways.'],['Delay the Attack',180,'You dribble slowly toward goal. Her job is to stay in front and make you change direction.'],['Recovery Run',180,'Start a few steps behind you. She runs back toward her goal first, gets goal-side, then defends.']]},
+{name:'Session 3 · Win It & Play Out',drills:[['Warm-Up',120,'Free dribble.'],['Choose the Moment',180,'You dribble slowly. She stays patient and tries to win the ball only when it gets a little too far from you.'],['Win & Dribble',180,'After she wins the ball, she keeps it and dribbles toward an open cone instead of kicking it away.'],['1-on-1 Switch',180,'Take turns attacking and defending. If she wins it, she immediately becomes the attacker and tries to dribble across the opposite line.']]}
 ]},
-{title:'Beginner 8 · Put It Together',description:'Combine dribbling, passing, receiving, and shooting.',cue:'Let her make decisions without correcting every touch.',sessions:[
+{title:'Beginner 8 · Put It Together',description:'Combine dribbling, passing, receiving, shooting, and defending.',cue:'Let her make decisions. After winning the ball, encourage control and a dribble or pass instead of simply kicking it away.',sessions:[
 {name:'Session 1 · Dribble & Pass',drills:[['Warm-Up',120,'Free dribble.'],['Dribble to Cone',120,'Dribble to a cone under control.'],['Pass to Dad',180,'After reaching the cone, pass to you.'],['Combination Game',180,'Dribble, pass, move, then receive again.']]},
 {name:'Session 2 · Receive & Shoot',drills:[['Warm-Up',120,'Free dribble.'],['Receive Pass',120,'Control a pass from you.'],['Turn to Goal',180,'After receiving, turn toward the goal.'],['Receive & Shoot',180,'Pass to her, she controls it, then shoots.']]},
-{name:'Session 3 · Mini Match',drills:[['Warm-Up',120,'Free dribble.'],['Passing Warm-Up',120,'Pass back and forth.'],['1-on-1',180,'Play a simple 1-on-1 game.'],['Mini Match',180,'Play freely. Let her dribble, pass, defend, and shoot.']]}
+{name:'Session 3 · Mini Match',drills:[['Warm-Up',120,'Free dribble.'],['Passing Warm-Up',120,'Pass back and forth.'],['1-on-1 Transition',180,'Play 1-on-1. Whoever wins the ball immediately attacks the opposite goal or line.'],['Mini Match',180,'Play freely. Let her dribble, pass, defend, win the ball, transition, and shoot.']]}
 ]}
 ];
 
